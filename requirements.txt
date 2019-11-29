@@ -57,3 +57,4 @@ Whoosh==2.7.4
 wkhtmltopdf==0.2
 WTForm==1.0
 WTForms==2.2.1
+python-dotenv

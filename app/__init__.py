@@ -21,10 +21,10 @@ else:
     app.debug = False
     app.config['SQLALCHEMY_DATABASE_URI'] = ''
     '''
-    
+DB_URL = config.DATABASE_URL or os.environ.get('DATABASE_URL') 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://apvest_admin:Symbolo2@@localhost/apvest_db'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///right-database.sqlite3'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'DATABASE_URL'
+app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 
 
