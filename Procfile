@@ -1,1 +1,1 @@
-web: gunicorn rights:app
+web: gunicorn app:app
