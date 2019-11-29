@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from config import Config
 from flask_migrate import Migrate
 import sqlite3
+import os
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -21,7 +22,7 @@ else:
     app.debug = False
     app.config['SQLALCHEMY_DATABASE_URI'] = ''
     '''
-DB_URL = config.DATABASE_URL or os.environ.get('DATABASE_URL') 
+DB_URL = os.environ.get('DATABASE_URL') 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://apvest_admin:Symbolo2@@localhost/apvest_db'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///right-database.sqlite3'
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
