@@ -23,7 +23,8 @@ else:
     '''
     
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://apvest_admin:Symbolo2@@localhost/apvest_db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///right-database.sqlite3'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///right-database.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'DATABASE_URL'
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
 
 
@@ -32,4 +33,4 @@ from app import routes, models
 if __name__ == '__main__':
      # Create tables
     db.create_all()
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    app.run(host='127.0.0.1', port=8080, debug=True)
